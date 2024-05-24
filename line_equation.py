@@ -1,8 +1,10 @@
 import numpy as np
 
+# Getting values of x and y from user
 x = np.array(input("Please enter x values: ").split(), dtype=float)
 y = np.array(input("Please enter y values: ").split(), dtype=float)
 
+# calculate theta
 def calculate_theta(x, y):
     x_bar = np.mean(x)
     y_bar = np.mean(y)
@@ -13,6 +15,7 @@ def calculate_theta(x, y):
 
 theta_value = calculate_theta(x, y)
 
+# calculate c
 def calculate_c(x, y, theta):
     c = np.mean(y) - theta * np.mean(x)
     return c
